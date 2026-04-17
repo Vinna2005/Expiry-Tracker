@@ -39,7 +39,10 @@ class CategoryItemsActivity : AppCompatActivity() {
         }
 
         findViewById<MaterialButton>(R.id.btnAddItem).setOnClickListener {
-            startActivity(Intent(this, AddCategoryActivity::class.java))
+            startActivity(
+                Intent(this, AddItemActivity::class.java)
+                    .putExtra("category", catName)
+            )
         }
     }
 }
